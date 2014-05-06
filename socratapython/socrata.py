@@ -4,7 +4,11 @@ from urllib import urlencode
 from urlparse import urljoin
 
 class Socrata(object):
-    '''A wrapper for the SODA 2.0 API by Socrata'''
+    '''
+    A wrapper for the SODA 2.0 API by Socrata
+    This should really use OAuth 2.0
+    '''
+
     def __init__(self, host, username, password, token):
         self.host = host
         self.username = username
