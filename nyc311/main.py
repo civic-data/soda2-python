@@ -19,6 +19,11 @@ except Exception,e:
 print items
 
 try:
+    items=reader.get({'order': 'created_date desc', 'limit':'1000'})
+except Exception,e:
+    print 'e1', e
+
+try:
     for item in items:
         #print item
         print '%s %s %s %s' % (item['created_date'], item['complaint_type'],item['latitude'],item['longitude'])
