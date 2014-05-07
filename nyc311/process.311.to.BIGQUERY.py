@@ -43,10 +43,13 @@ for line in reader:
                         row.append('')
             elif typedict[key]=='integer':
                     row.append(int(float(line[key])))
+                    pass
             elif typedict[key]=='float':
                     row.append(float(line[key]))
+                    pass
             elif typedict[key]=='string':
                     row.append(str(line[key]))
+                    pass
 
 
 
@@ -92,6 +95,7 @@ for line in reader:
     #row = [line['BBLE']]
     #print "QQQ",len(row)
     if len(row) == 52:
+    #if True:
         csvwriter.writerow(row)
     else:
         #row=['ISSUE']+row
