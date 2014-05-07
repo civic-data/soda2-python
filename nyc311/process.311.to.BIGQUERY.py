@@ -39,7 +39,7 @@ for line in reader:
                         date = datetime.strptime(line[key],'%m/%d/%Y %I:%M:%S %p')
                         row.append(datetime.strftime(date,'%Y-%m-%dT%H:%M:%S-05:00'))
                     except Exception,e:
-                        print 'issue1:',e, key, line[key]
+                        #print 'issue1:',e, key, line[key]
                         row.append('')
             elif typedict[key]=='integer':
                     row.append(int(float(line[key])))
