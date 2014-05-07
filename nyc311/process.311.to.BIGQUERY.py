@@ -32,7 +32,7 @@ for line in reader:
                   
 # 05/06/2014 03:05:28 AM
             if typedict[key]=='timestamp':
-                if line[key]=='':
+                if line[key]=='': or line[key]=='Unspecified':
                     row.append('')
                 else:
                     try:
