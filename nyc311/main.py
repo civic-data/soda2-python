@@ -47,12 +47,24 @@ print reader.setDataset('erm2-nwe9')
 ##  u'incident_address': u'1112 CALHOUN AVENUE',
 ##  u'park_facility_name': u'Unspecified'}]
 
+items=reader.get({'select': 'count(*)'})
+print items
+
+items=reader.get({'select':'created_date','order': 'created_date desc','limit':'2'})
+print items
+
+items=reader.get({'select':'created_date','order': 'created_date asc','limit':'2'})
+print items
+
+sys.exit()
+
 try:
     #items=reader.get({'where': 'created_date >= 2014-05-04', 'limit':'2'})
     #items=reader.get({'order': 'created_date desc', 'limit':'10'})
     #items=reader.get({'order': 'created_date desc', 'limit':'1'})
 
-    items=reader.get({'select': 'count(complaint_type) as count1,complaint_type, year(resolution_action_updated_date) as year1', 'group':'complaint_type,year1', 'order':'count1 desc'})
+    items=reader.get({'select': 'count(*)'})
+    #items=reader.get({'select': 'count(complaint_type) as count1,complaint_type, year(resolution_action_updated_date) as year1', 'group':'complaint_type,year1', 'order':'count1 desc'})
 
     #items=reader.get({'limit': '2'})
     #items=reader.get()
