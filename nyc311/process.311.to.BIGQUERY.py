@@ -95,8 +95,8 @@ for line in reader:
 #                  row.append(line[key])
         except Exception,e:
             try:
-                sys.stderr.write( 'BIG ISSUE:%s\n'% e)
-                #sys.stderr.write( 'BIG ISSUE:%s:%s>>>%s<<< %s\n'% (typedict[key],key,line[key], line))
+                #sys.stderr.write( 'BIG ISSUE:%s\n'% e)
+                sys.stderr.write( 'BIG ISSUE:%s:%s>>>%s<<< %s\n'% (typedict[key],key,line[key], line))
             except Exception,e:
                 #sys.stderr.write( 'REALLY BIG ISSUE:%s:%s\n'% (key,line))
                 pass
